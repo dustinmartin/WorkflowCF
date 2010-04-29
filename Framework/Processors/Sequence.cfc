@@ -62,10 +62,10 @@
 				</cfcatch>
 			</cftry>
 
-				<cfif hasLogger()><cfset getLogger().debug("Finished executing activity: #activity.getActivityName()#") /></cfif>
+			<cfif hasLogger()><cfset getLogger().debug("Finished executing activity: #activity.getActivityName()#") /></cfif>
 
 			<cfif context.processShouldStop()>
-				<cfif hasLogger()><cfset getLogger().debug("workflow process interrupted by activity ...") /></cfif>
+				<cfif hasLogger()><cfset getLogger().debug("Workflow process interrupted by activity: #activity.getActivityName()#") /></cfif>
 				<cfbreak />
 			</cfif>
 		</cfloop>
